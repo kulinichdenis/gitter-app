@@ -1,0 +1,34 @@
+.chat {
+	border-bottom: 3px solid #516692;
+	height: 400px;
+	overflow: auto;
+}
+
+.form {
+	margin-top: 20px;
+	padding: 0 20px;
+}
+
+.textarea {
+	width: 100%;
+}
+
+.title-message {
+	color: #f36d15;
+}
+
+.body-message {
+	color: #3053ad;
+}
+
+.table > tbody > tr > td {
+	vertical-align: middle;
+}
+
+.table > tbody > tr > td:nth-child(even) {
+	text-align: right;
+}
+
+.m-t-10 {
+	margin-top: 10px;
+}
