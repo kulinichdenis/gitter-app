@@ -67,7 +67,7 @@ class MainApp extends Component {
             </Row>
             </Grid>
           :
-            <div className="alert alert-success text-center" role="alert">You need authenticatied</div>
+            <div className="alert alert-success text-center" role="alert">You need authenticated</div>
           }       
         </div>
       </div>
