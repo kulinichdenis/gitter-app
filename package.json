@@ -15,10 +15,12 @@
   },
   "homepage": "http://redux.js.org",
   "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-polyfill": "^6.3.14",
     "babel-register": "^6.4.3",
     "bootstrap": "^3.3.7",
     "express": "^4.13.3",
+    "express-session": "^1.14.1",
     "isomorphic-fetch": "^2.2.1",
     "passport": "~0.2.0",
     "passport-oauth2": "~1.1.1",
