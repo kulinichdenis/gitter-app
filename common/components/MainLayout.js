@@ -3,7 +3,15 @@ import { Navbar, Nav, NavItem, MenuItem, NavDropdown, Grid, Row, Col, Button } f
 
 class MainLayout extends Component {
   render() {
+    let authMenu
     const { auth } = this.props
+    
+    if(auth.token) {
+      authMenu = (<MenuItem href='/logout' eventKey={3.1}>Logout</MenuItem>)
+    } else {
+      authMenu = (<MenuItem href='/login' eventKey={3.1}>Login</MenuItem>)
+    }
+    
     return (
       <div>
         <Navbar inverse>
@@ -19,8 +27,7 @@ class MainLayout extends Component {
               <NavItem eventKey={1} href='https://gitter.im/home#createroom'>Create Room</NavItem>
             }
             <NavDropdown eventKey={3} title={auth.user.displayName ? auth.user.displayName : 'Authorization'} id='basic-nav-dropdown'>
-              <MenuItem href='/login' eventKey={3.1}>Login</MenuItem>
-              <MenuItem href='/logout' eventKey={3.2}>Logout</MenuItem>
+              { authMenu }
             </NavDropdown>
             </Nav>
           </Navbar.Collapse>
