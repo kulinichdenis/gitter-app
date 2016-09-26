@@ -97,18 +97,15 @@ function handleRender(req, res) {
     // Read the counter from the request, if provided
     let auth
     const params = qs.parse(req.query)
-    // const counter = parseInt(params.counter, 10) || apiResult || 0
     
     if(req.session && req.user) {
       auth = { token: req.session.token, user: req.user } 
     }
 
     const preloadedState = { auth }  
-    const store = configureStore(preloadedState)
-    
+    const store = configureStore(preloadedState)  
     // Grab the initial state from our Redux store
-    const finalState = store.getState()
-    
+    const finalState = store.getState()  
     // Send the rendered page back to the client
     res.send(renderFullPage(finalState))
   })
@@ -153,8 +150,7 @@ app.get('/logout', function(req,res) {
 });
 
 app.get('/room/*', function(req,res) {
-  console.log(req)
-  // console.log(res)
+  handleRender(req, res)
 })
 
 app.listen(port, (error) => {
